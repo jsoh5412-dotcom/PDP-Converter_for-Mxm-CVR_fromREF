@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=860">
+<title>qdRx 레드와인비니거 앰플 상세페이지</title>
+<style>
+@font-face{font-family:Pretendard;font-weight:300;src:url(assets/fonts/Pretendard-Light.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:400;src:url(assets/fonts/Pretendard-Regular.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:500;src:url(assets/fonts/Pretendard-Medium.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:600;src:url(assets/fonts/Pretendard-SemiBold.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:700;src:url(assets/fonts/Pretendard-Bold.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:800;src:url(assets/fonts/Pretendard-ExtraBold.woff2) format('woff2')}
+@font-face{font-family:Serif;font-weight:500;src:url(assets/fonts/CormorantGaramond-Medium.ttf)}
+@font-face{font-family:Serif;font-weight:600;src:url(assets/fonts/CormorantGaramond-SemiBold.ttf)}
+@font-face{font-family:Serif;font-style:italic;font-weight:500;src:url(assets/fonts/CormorantGaramond-Italic.ttf)}
+
+:root{
+  --ink:#0b0b0d; --ink2:#17171a; --paper:#f4f3f1; --white:#fff;
+  --grey:#8b8b90; --grey2:#5d5d63; --line:rgba(255,255,255,.14); --line-d:rgba(0,0,0,.12);
+  --wine:#6d0f1e; --wine2:#9a1a2e; --wine3:#c4344b; --rose:#e9c9cf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#2a2a2e}
+body{font-family:Pretendard,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.02em;word-break:keep-all}
+.page{width:860px;margin:0 auto;background:var(--white)}
+.sec{position:relative;width:860px;overflow:hidden}
+.c{text-align:center}
+img{display:block}
+
+/* type */
+.logo{font-family:Serif;font-weight:600;letter-spacing:.01em}
+.en{font-family:Serif;font-style:italic;font-weight:500;letter-spacing:0}
+.eyebrow{font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);font-weight:500}
+.h-l{font-size:40px;font-weight:300;line-height:1.35}
+.h-b{font-size:46px;font-weight:700;line-height:1.3}
+.sub-en{font-size:15px;color:var(--grey);margin-top:14px;letter-spacing:0}
+.body{font-size:21px;line-height:1.65;color:var(--grey2)}
+.note{font-size:13px;color:var(--grey);line-height:1.6}
+.dark{background:var(--ink);color:#fff}
+.dark .body{color:#b9b9be}
+.wine-t{color:var(--wine2)}
+.dark .wine-t{color:var(--wine3)}
+.vline{width:1px;height:70px;background:currentColor;opacity:.35;margin:34px auto}
+.pill{display:inline-block;padding:9px 22px;border-radius:99px;background:var(--wine);color:#fff;font-size:17px;font-weight:600;letter-spacing:0}
+.pill.o{background:transparent;border:1px solid currentColor}
+.ph{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;border:1.5px dashed rgba(127,127,127,.6);color:var(--grey);font-size:15px;text-align:center;background:repeating-linear-gradient(135deg,rgba(127,127,127,.06) 0 12px,transparent 12px 24px)}
+.ph b{font-size:17px;color:inherit}
+
+/* ===== S01 hero ===== */
+#s01{height:1180px;background:#000}
+#s01 .bg{position:absolute;inset:0;background:url(assets/img/hero_paris.jpg) center 20%/cover;filter:brightness(.62) saturate(.8)}
+#s01 .grad{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.55) 58%,#000 92%)}
+#s01 .in{position:absolute;left:0;right:0;bottom:120px;text-align:center;color:#fff}
+#s01 .logo{font-size:66px}
+#s01 .logo sup{font-size:20px;vertical-align:top;margin-left:4px;font-family:Pretendard;font-weight:400}
+#s01 h2{font-size:42px;font-weight:700;margin-top:30px}
+#s01 p{font-size:21px;margin-top:20px;color:#e2e2e2}
+#s01 .fr{font-size:18px;color:#a9a9ae;margin-top:26px;line-height:1.55}
+#s01 .badge{display:flex;align-items:center;gap:28px;margin:70px 70px 0;padding:30px 36px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.04);text-align:left}
+#s01 .seal{width:120px;height:120px;border-radius:14px;flex:none;background:radial-gradient(circle at 50% 40%,#2a2a2e,#0a0a0b);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+#s01 .seal .logo{font-size:34px}
+#s01 .seal small{font-size:10px;letter-spacing:.2em;color:#aaa}
+#s01 .badge h3{font-size:28px;font-weight:700}
+#s01 .badge p{font-size:17px;margin-top:8px;color:#bdbdc2}
+
+/* ===== S02 launch ===== */
+#s02{background:linear-gradient(180deg,#000 0,#120709 60%,#000 100%);color:#fff;padding:110px 0 0}
+#s02 .k{font-size:28px;font-weight:300;color:#ddd}
+#s02 h1{font-size:58px;font-weight:800;margin-top:10px;line-height:1.25}
+#s02 h1 .logo{font-size:72px;font-weight:600;display:block;letter-spacing:.01em}
+#s02 .tag{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);font-size:22px;color:#e6e6e6}
+.flag{display:inline-flex;width:34px;height:22px;border-radius:3px;overflow:hidden}
+.flag i{flex:1}.flag i:nth-child(1){background:#1f3f99}.flag i:nth-child(2){background:#fff}.flag i:nth-child(3){background:#d8283b}
+#s02 .shot{position:relative;margin-top:70px;height:860px;background:url(assets/img/p_france.jpg) center/cover}
+#s02 .shot:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000 0,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 80%,rgba(0,0,0,.35))}
+
+/* ===== S03 france / 13 years ===== */
+#s03{background:#0d0d0f;color:#fff;padding:130px 0 120px}
+#s03 .bg{position:absolute;inset:0 0 auto;height:900px;background:url(assets/img/vineyard.jpg) center/cover;filter:brightness(.55) saturate(.85)}
+#s03 .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,15,.75) 0,rgba(13,13,15,.15) 40%,rgba(13,13,15,.6) 75%,#0d0d0f 100%)}
+#s03 .in{position:relative}
+#s03 h2 .h-b{display:block}
+#s03 .yt{position:relative;width:640px;margin:420px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6);background:#000}
+#s03 .yt img{width:100%}
+#s03 .lens{position:absolute;right:-30px;bottom:-40px;width:250px;height:250px;border-radius:50%;border:5px solid #fff;background:url(assets/img/c_yt.jpg) no-repeat;background-size:1560px auto;background-position:-844px -1013px;box-shadow:0 18px 50px rgba(0,0,0,.6)}
+#s03 .lens:after{content:"";position:absolute;right:-48px;bottom:-48px;width:70px;height:14px;background:#fff;border-radius:8px;transform:rotate(45deg);transform-origin:left center}
+#s03 .yt-wrap{position:relative;width:640px;margin:0 auto}
+#s03 .q{margin-top:120px}
+#s03 .q .h-l{color:#e9e9e9}
+#s03 .q .h-b em{font-style:normal;color:var(--wine3)}
+
+/* ===== S04 certificate ===== */
+#s04{background:var(--paper);padding:120px 0 110px}
+#s04 .h-b em{font-style:normal;color:var(--wine2)}
+#s04 .doc{position:relative;width:560px;margin:60px auto 0;background:#fff;box-shadow:0 24px 60px rgba(0,0,0,.12);padding:24px}
+#s04 .doc img{width:100%}
+#s04 .hl{position:absolute;left:-60px;right:-60px;top:300px;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;box-shadow:0 14px 34px rgba(109,15,30,.4)}
+#s04 .hl span{font-size:17px;opacity:.85;white-space:nowrap}
+#s04 .hl strong{font-size:28px;font-weight:800;display:flex;align-items:center;gap:12px;white-space:nowrap}
+#s04 .cap{margin-top:46px;font-size:24px;font-weight:600}
+#s04 .cap b{color:var(--wine2)}
+
+/* ===== S05 formula ===== */
+#s05{background:#000;color:#fff;height:1240px}
+#s05 .bg{position:absolute;inset:0;background:url(assets/img/wine_swirl.jpg) center/cover;filter:brightness(.7)}
+#s05 .bg:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 62%,rgba(0,0,0,0) 0,rgba(0,0,0,.35) 45%,#000 85%),linear-gradient(180deg,#000 0,rgba(0,0,0,0) 30%)}
+#s05 .in{position:relative;padding-top:120px}
+#s05 .k{font-size:24px;color:#cfcfcf;font-weight:300}
+#s05 h2{font-size:48px;font-weight:700;line-height:1.35;margin-top:22px}
+#s05 .drop{position:absolute;left:50%;top:560px;transform:translateX(-50%);width:600px;height:400px;border-radius:200px;background:url(assets/img/texture.jpg) center/cover;box-shadow:0 0 120px rgba(196,52,75,.35);-webkit-mask:radial-gradient(ellipse at center,#000 52%,transparent 72%)}
+#s05 .ref{position:absolute;left:0;right:0;bottom:70px;text-align:center;font-size:14px;color:#8d8d92;letter-spacing:.12em}
+
+/* ===== S06 complex ===== */
+#s06{background:linear-gradient(180deg,#fff 0,#f2f1ef 100%);padding:120px 0 120px}
+#s06 .k{font-size:30px;font-weight:300;color:var(--wine2)}
+#s06 h2{font-size:52px;font-weight:800;margin-top:6px}
+#s06 h2 .logo{font-size:60px;margin-right:6px}
+#s06 .formula{margin:26px auto 0;font-size:19px;color:var(--grey2);letter-spacing:0}
+#s06 .formula b{color:var(--ink);font-weight:600}
+#s06 .t2{margin-top:56px;font-size:26px;line-height:1.5;color:#3a3a3f}
+#s06 .t2 b{color:var(--ink)}
+#s06 .mol{position:relative;width:860px;height:620px;margin-top:20px}
+#s06 .mol img{position:absolute;left:50%;top:40px;width:540px;transform:translateX(-50%);mix-blend-mode:multiply;-webkit-mask:radial-gradient(circle at 50% 50%,#000 58%,transparent 70%)}
+#s06 .mol svg{position:absolute;inset:0}
+#s06 .lbl{position:absolute;font-size:15px;color:var(--grey2);line-height:1.35;letter-spacing:0}
+#s06 .lbl b{display:block;font-size:17px;color:var(--ink);font-weight:600}
+#s06 .card{margin:30px 70px 0;background:var(--wine);color:#fff;border-radius:18px;display:flex;align-items:center;gap:30px;padding:40px 44px;text-align:left}
+#s06 .card .en{font-size:26px;line-height:1.3}
+#s06 .card p{font-size:16px;color:#f0d6da;margin-top:16px;line-height:1.6}
+#s06 .card .thumb{flex:none;width:240px;height:150px;border-radius:12px;background:url(assets/img/vineyard.jpg) center/cover}
+
+/* ===== S07 low irritation ===== */
+#s07{background:#fff;padding:130px 0 120px}
+#s07 .h-l b{font-weight:700}
+#s07 .so{font-size:26px;color:var(--grey);margin-top:60px}
+#s07 .tested{margin:60px 70px 0;border-radius:20px;background:var(--ink);color:#fff;padding:56px 50px 50px;position:relative}
+#s07 .tested .k{font-size:22px;color:#bdbdc2}
+#s07 .tested h3{font-size:48px;font-weight:800;margin-top:10px}
+#s07 .tested .ph{height:520px;margin-top:40px;border-color:rgba(255,255,255,.35);color:#9c9ca2}
+#s07 .stamp{position:absolute;right:-18px;top:-46px;background:#fff;width:130px;height:130px;border-radius:50%;border:2px solid var(--wine3);color:var(--wine3);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);font-weight:700;font-size:15px;letter-spacing:.06em}
+#s07 .stamp b{font-size:30px}
+#s07 .no{margin-top:110px}
+#s07 .no .q{font-size:32px;color:#3c3c41}
+#s07 .no .x{font-size:96px;font-weight:800;color:var(--wine2);letter-spacing:-.02em;line-height:1.1;margin-top:10px}
+#s07 .stat{margin-top:20px}
+#s07 .stat .k{font-size:22px;color:var(--grey)}
+#s07 .big{font-size:150px;font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--ink);margin-top:14px}
+#s07 .big small{font-size:80px;font-weight:700}
+#s07 .big-r{font-size:150px;font-weight:800;letter-spacing:-.05em;line-height:.5;color:var(--ink);opacity:.06;transform:scaleY(-1);-webkit-mask:linear-gradient(0deg,#000,transparent 70%)}
+#s07 .stat h4{font-size:36px;font-weight:700;margin-top:-10px}
+
+/* ===== reviews (S08, S13) ===== */
+.rv-sec{background:linear-gradient(180deg,#141416,#0b0b0d);color:#fff;padding:120px 0 120px}
+.rv{margin:0 70px 26px;background:#f6f5f3;color:var(--ink);border-radius:18px;padding:30px 34px 34px;text-align:left}
+.rv .top{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line-d)}
+.rv .stars{color:var(--wine2);font-size:20px;letter-spacing:2px}
+.rv .meta{font-size:14px;color:var(--grey)}
+.rv .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.rv .ba .ph{height:230px;border-radius:10px 10px 0 0;font-size:14px}
+.rv .ba span{display:block;text-align:center;padding:11px 0;font-size:15px;font-weight:600;border-radius:0 0 10px 10px;background:#d9d8d5;color:#55555a}
+.rv .ba div:nth-child(2) span{background:var(--wine);color:#fff}
+.rv .txt{margin-top:24px;font-size:19px;line-height:1.7;color:#333;text-align:center}
+.rv .txt small{display:block;margin-top:8px;font-size:15px;color:var(--grey)}
+
+/* ===== S09 clinical (dermacaps layout) ===== */
+#s09{background:#000;color:#fff;padding:60px 60px 70px}
+#s09 .hd{display:flex;justify-content:space-between;font-size:14px;letter-spacing:.14em;color:#bbb;padding-bottom:22px;border-bottom:1px solid var(--line)}
+#s09 .hd .logo{font-size:24px;letter-spacing:.02em;color:#fff}
+#s09 .top{position:relative;height:540px}
+#s09 .top h2{position:absolute;left:0;top:70px;font-size:52px;font-weight:800;line-height:1.25}
+#s09 .top .s{position:absolute;left:0;top:240px;font-size:22px;color:#ddd}
+#s09 .nums{position:absolute;left:0;top:300px;display:flex;gap:46px}
+#s09 .nums div{font-size:17px;color:#ccc;border-right:1px solid var(--line);padding-right:46px}
+#s09 .nums div:last-child{border:0}
+#s09 .nums b{display:block;font-size:28px;color:var(--wine3);font-weight:700}
+#s09 .top .t{position:absolute;left:0;top:420px;font-size:24px;font-weight:700}
+#s09 .top .t small{display:block;font-size:16px;color:#888;font-weight:400;margin-top:6px}
+#s09 .bust{position:absolute;right:-20px;top:30px;width:440px;-webkit-mask:radial-gradient(ellipse at 55% 45%,#000 55%,transparent 75%)}
+#s09 h5{font-size:22px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+#s09 .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+#s09 .cell{border:1px solid #2c2c31;border-radius:6px;padding:22px 22px 24px;background:#0b0b0d}
+#s09 .cell .cat{font-size:11px;letter-spacing:.14em;color:#777}
+#s09 .cell h6{font-size:24px;font-weight:700;margin-top:6px}
+#s09 .cell .n{display:flex;justify-content:space-between;align-items:flex-end;margin-top:6px}
+#s09 .cell .n b{font-size:58px;font-weight:800;color:var(--wine3);letter-spacing:-.03em;line-height:1}
+#s09 .cell .n small{font-size:13px;color:#999;text-align:right;line-height:1.3}
+#s09 .cell .ba{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:14px}
+#s09 .cell .ba span{display:block;text-align:center;font-size:14px;font-weight:600;padding:7px 0;background:#2a2a2e}
+#s09 .cell .ba div:nth-child(2) span{background:var(--wine2)}
+#s09 .cell .ba .ph{height:150px;font-size:12px;border-color:#444;color:#777}
+#s09 .cell .bar{display:grid;grid-template-columns:52px 1fr 64px;align-items:center;gap:10px;font-size:13px;color:#999;margin-top:9px}
+#s09 .cell .bar i{display:block;height:10px;background:#555}
+#s09 .cell .bar.a i{background:linear-gradient(90deg,#fff,var(--wine3))}
+#s09 .cell .bar em{font-style:normal;text-align:right;color:#ddd}
+#s09 .cell .m{display:flex;justify-content:space-between;font-size:15px;color:#bbb;margin-top:16px;padding-top:12px;border-top:1px solid #222}
+#s09 .cell .m b{color:#fff}
+#s09 .prod{padding:0;overflow:hidden;position:relative;background:#f4f3f1}
+#s09 .prod img{width:100%;height:100%;object-fit:cover}
+#s09 .foot{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:#888;line-height:1.7}
+
+/* ===== S10 refund ===== */
+#s10{height:1100px;background:radial-gradient(ellipse at 50% 60%,#2a0a11 0,#0a0a0c 65%);color:#fff;padding-top:110px}
+#s10 .k{font-size:22px;color:#c9c9ce}
+#s10 h2{font-size:52px;font-weight:800;line-height:1.3;margin-top:22px}
+#s10 h2 em{font-style:normal;color:var(--rose)}
+#s10 .card{width:460px;margin:60px auto 0;border-radius:22px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.6),0 0 120px rgba(196,52,75,.25)}
+#s10 .card img{width:100%}
+#s10 .orb{width:440px;height:440px;margin:60px auto 0;border-radius:50%;overflow:hidden;box-shadow:0 0 140px rgba(196,52,75,.4)}
+#s10 .orb img{width:540px;margin:-50px 0 0 -50px}
+#s10 .t1{font-size:26px;margin-top:56px;line-height:1.5}
+#s10 .t1 b{font-weight:700}
+#s10 .t2{font-size:17px;color:#9a9aa0;margin-top:24px;line-height:1.6}
+
+/* ===== S11 clinic ===== */
+#s11{background:#fff;padding:120px 0 110px}
+#s11 .logo{font-size:56px;color:var(--ink)}
+#s11 .k{font-size:28px;color:#3c3c41;margin-top:26px;font-weight:400}
+#s11 h2{font-size:48px;font-weight:800;margin-top:8px}
+#s11 .img{height:500px;margin:56px 0 0;background:url(assets/img/clinic.jpg) center/cover}
+#s11 .pill{margin-top:60px;font-size:22px;padding:14px 36px;background:var(--ink)}
+#s11 p{font-size:22px;color:var(--grey2);margin-top:24px;line-height:1.6}
+#s11 .mail{display:inline-block;margin-top:26px;font-size:20px;border-bottom:1px solid var(--ink);padding-bottom:4px;font-weight:600}
+
+/* ===== S12 event ===== */
+#s12{background:linear-gradient(180deg,#0b0b0d 0,#1d0a0f 50%,#0b0b0d 100%);color:#fff;padding:110px 0 100px}
+#s12 .bg{position:absolute;inset:0 0 auto;height:420px;background:url(assets/img/vineyard.jpg) center/cover;opacity:.25}
+#s12 .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.2),#0b0b0d)}
+#s12 .in{position:relative}
+#s12 .k{font-size:34px;font-weight:300}
+#s12 h2{font-size:52px;font-weight:800;margin-top:6px}
+#s12 .sub-en{color:#8c8c92}
+.deal{position:relative;margin:56px 70px 0;background:#fff;color:var(--ink);border-radius:16px;overflow:visible}
+.deal .bar{height:46px;border-radius:16px 16px 0 0;background:linear-gradient(90deg,#2a2a2e,#0b0b0d);display:flex;align-items:center;padding:0 24px}
+.deal .bar .logo{font-size:20px;color:#fff;opacity:.6}
+.deal .pct{position:absolute;right:30px;top:-26px;width:96px;height:112px;background:var(--wine2);color:#fff;clip-path:polygon(0 0,100% 0,100% 62%,50% 100%,0 62%);display:flex;align-items:flex-start;justify-content:center;padding-top:20px;font-size:34px;font-weight:800;letter-spacing:-.04em}
+.deal .pct small{font-size:18px;margin-top:12px}
+.deal .row{display:flex;gap:26px;padding:28px 34px 32px;align-items:center;text-align:left}
+.deal .pics{position:relative;width:250px;height:190px;flex:none}
+.deal .pics img{position:absolute;width:160px;mix-blend-mode:multiply}
+.deal .info{flex:1}
+.deal .tags{display:flex;gap:8px;margin-bottom:12px}
+.deal .tags span{font-size:14px;font-weight:700;padding:5px 14px;border-radius:99px;border:1px solid var(--wine2);color:var(--wine2)}
+.deal .tags span:first-child{background:var(--wine2);color:#fff}
+.deal h4{font-size:26px;font-weight:700;line-height:1.3}
+.deal h4 small{display:block;font-size:17px;color:var(--grey);font-weight:500;margin-top:2px}
+.deal .pr{display:flex;justify-content:space-between;font-size:18px;color:#a3a3a8;margin-top:12px}
+.deal .pr s{color:#a3a3a8}
+.deal .pr.f{color:var(--ink);font-weight:600}
+.deal .fin{display:flex;justify-content:space-between;align-items:center;margin-top:14px;background:var(--wine);color:#fff;padding:12px 18px;font-size:19px}
+.deal .fin b{font-size:30px;font-weight:800}
+#s12 .warn{font-size:15px;color:#8c8c92;margin-top:44px;line-height:1.6}
+
+/* ===== S13 rating ===== */
+#s13 .rating{display:flex;align-items:flex-end;justify-content:center;gap:10px;margin-top:40px}
+#s13 .rating b{font-size:110px;font-weight:800;line-height:1;letter-spacing:-.04em}
+#s13 .rating span{font-size:40px;color:#888;padding-bottom:12px}
+#s13 .st{position:relative;display:inline-block;font-size:56px;letter-spacing:8px;color:#3a3a3f;margin:16px 0 60px;line-height:1}
+#s13 .st i{position:absolute;left:0;top:0;width:96%;overflow:hidden;white-space:nowrap;color:var(--wine3);font-style:normal}
+
+/* ===== S14 check point ===== */
+#s14{background:var(--paper);padding:120px 0 110px}
+#s14 .pill{font-size:20px;padding:10px 28px;letter-spacing:.04em}
+#s14 .k{font-size:34px;font-weight:300;margin-top:44px}
+#s14 h2{font-size:54px;font-weight:800;margin-top:6px}
+#s14 h2 em{font-style:normal;color:var(--wine2)}
+#s14 .flow{display:flex;align-items:center;justify-content:center;gap:26px;margin:40px 70px 0}
+#s14 .flow figure{flex:1;position:relative;border-radius:14px;overflow:hidden;height:360px}
+#s14 .flow figure img{width:100%;height:100%;object-fit:cover}
+#s14 .flow figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 0 22px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85));color:#fff;font-size:17px;line-height:1.45}
+#s14 .flow figcaption b{display:block;font-size:24px}
+#s14 .arrow{flex:none;width:64px;height:64px;border-radius:50%;background:var(--wine);display:flex;align-items:center;justify-content:center}
+#s14 .t{font-size:28px;margin-top:50px;line-height:1.55;color:#3c3c41}
+#s14 .t b{font-size:34px;color:var(--ink);display:block}
+
+/* ===== S15 market ===== */
+#s15{background:#fff;padding:0 0 120px}
+#s15 .quote{background:var(--ink);color:#fff;padding:100px 80px 90px;text-align:center}
+#s15 .quote .mk{font-family:Serif;font-size:110px;line-height:.6;color:var(--wine3)}
+#s15 .quote h3{font-size:34px;font-weight:600;line-height:1.5;margin-top:20px}
+#s15 .quote cite{display:block;font-style:normal;font-size:14px;color:#8a8a90;margin-top:30px;line-height:1.6;letter-spacing:0}
+#s15 .k{font-size:34px;font-weight:300;margin-top:110px}
+#s15 h2{font-size:50px;font-weight:800;margin-top:4px}
+#s15 .shot{position:relative;margin:50px 70px 0;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.14);background:#fff}
+#s15 .shot img{width:100%;border-radius:14px;height:560px;object-fit:cover;object-position:top}
+#s15 .shot:after{content:"";position:absolute;inset:auto 0 0;height:180px;border-radius:0 0 14px 14px;background:linear-gradient(180deg,transparent,#fff)}
+#s15 .lens{position:absolute;left:-30px;top:-50px;width:260px;height:260px;border-radius:50%;border:5px solid var(--ink);background:#fff;box-shadow:0 18px 50px rgba(0,0,0,.3);z-index:2;display:flex;align-items:center;justify-content:center}
+#s15 .lens b{font-size:52px;font-weight:800;background:#fff;padding:0 6px}
+#s15 .lens:after{content:"";position:absolute;right:-50px;bottom:-30px;width:80px;height:16px;background:var(--ink);border-radius:8px;transform:rotate(40deg)}
+#s15 .t1{font-size:28px;color:#3c3c41;margin-top:30px;line-height:1.5}
+#s15 .t1 b{display:block;font-size:38px;color:var(--ink);margin-top:6px}
+#s15 .chain{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:60px;font-size:24px;font-weight:600}
+#s15 .chain span{padding:14px 26px;border-radius:99px;background:var(--paper)}
+#s15 .chain span:last-child{background:var(--wine);color:#fff}
+#s15 .chain i{font-style:normal;color:var(--grey)}
+#s15 .real{font-size:30px;margin-top:40px}
+#s15 .real b{border-bottom:3px solid var(--wine2)}
+#s15 .survey{margin:110px 70px 0;border-radius:20px;background:var(--ink);color:#fff;padding:54px 50px;display:flex;align-items:center;justify-content:space-between;text-align:left}
+#s15 .survey p{font-size:24px;line-height:1.5;color:#d2d2d6}
+#s15 .survey b{font-size:96px;font-weight:800;letter-spacing:-.04em;color:var(--wine3);line-height:1}
+#s15 .survey b small{font-size:50px}
+#s15 .fin{margin-top:70px}
+#s15 .fin .t{font-size:28px;color:#3c3c41}
+#s15 .fin h3{font-size:44px;font-weight:800;line-height:1.35}
+#s15 .fin h3 em{font-style:normal;color:var(--wine2)}
+
+/* ===== S16 point 1 ===== */
+#s16{background:#fff;padding:0 0 120px}
+#s16 .head{position:relative;height:1040px;background:linear-gradient(180deg,#f4f3f1,#fff)}
+#s16 .head>img{position:absolute;right:-250px;top:330px;width:720px;mix-blend-mode:multiply;-webkit-mask:linear-gradient(90deg,transparent 0,#000 22%)}
+#s16 .head .tx{position:absolute;left:70px;top:110px;text-align:left}
+.point{display:inline-block;font-family:Serif;font-style:italic;font-size:30px;color:#fff;background:var(--wine);padding:4px 22px 6px}
+#s16 .head h2{font-size:30px;font-weight:500;color:#3c3c41;margin-top:30px}
+#s16 .head h3{font-size:50px;font-weight:800;line-height:1.3;margin-top:8px}
+#s16 .head p{font-size:21px;color:var(--grey2);margin-top:26px;line-height:1.6}
+#s16 .head p b{color:var(--ink)}
+#s16 .list{position:absolute;left:70px;top:480px;width:340px}
+#s16 .list li{list-style:none;display:flex;align-items:center;gap:16px;padding:11px 0;border-bottom:1px solid var(--line-d)}
+#s16 .list li img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+#s16 .list b{font-size:19px;display:block}
+#s16 .list span{font-size:14px;color:var(--grey)}
+#s16 .note{position:absolute;left:70px;bottom:24px}
+#s16 .mech{margin-top:60px}
+#s16 .mech .k{font-size:30px;font-weight:300;color:#3c3c41}
+#s16 .mech h3{font-size:50px;font-weight:800;margin-top:6px}
+.step{margin:34px 70px 0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line-d)}
+.step .sh{display:flex;align-items:center;gap:14px;background:var(--ink);color:#fff;padding:18px 30px;font-size:24px;font-weight:700;text-align:left}
+.step .sh i{font-style:normal;font-family:Serif;font-size:30px;color:var(--wine3);width:30px}
+.step .sb{display:flex;justify-content:center;align-items:flex-start;gap:12px;padding:28px 20px 26px;background:#f7f6f4}
+.step .ing{width:130px;text-align:center;font-size:15px;font-weight:600;line-height:1.35}
+.step .ing img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 10px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.step .ing small{display:block;font-weight:400;color:var(--grey);font-size:13px}
+.step .plus{width:30px;height:30px;border-radius:50%;background:var(--wine);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:40px;flex:none}
+.step-arrow{width:0;height:0;margin:16px auto 0;border-left:40px solid transparent;border-right:40px solid transparent;border-top:24px solid #d9d8d5}
+
+/* ===== S17 point 2 ===== */
+#s17{background:#000;color:#fff;padding:0 0 120px}
+#s17 .head{position:relative;height:1180px}
+#s17 .head .bg{position:absolute;inset:0;background:url(assets/img/grape_crush.jpg) center 70%/cover;filter:brightness(.75)}
+#s17 .head .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000 0,rgba(0,0,0,.5) 28%,rgba(0,0,0,0) 50%,rgba(0,0,0,.2) 80%,#000 100%)}
+#s17 .head .in{position:relative;padding-top:110px}
+#s17 .head h2{font-size:30px;font-weight:300;margin-top:34px}
+#s17 .head h3{font-size:54px;font-weight:800;margin-top:8px;line-height:1.3}
+#s17 .head h3 em{font-style:normal;color:var(--rose)}
+#s17 .head p{font-size:22px;color:#cfcfd3;margin-top:24px}
+#s17 .head p b{color:#fff}
+#s17 .head .orb{position:absolute;left:50%;bottom:110px;transform:translateX(-50%);width:400px;height:400px;border-radius:50%;overflow:hidden;box-shadow:0 0 120px rgba(196,52,75,.45)}
+#s17 .head .orb img{width:490px;margin:-45px 0 0 -45px}
+#s17 .head .note{position:absolute;left:0;right:0;bottom:50px;color:#8a8a90}
+#s17 .ros{margin-top:60px}
+#s17 .ros .k{font-size:34px;font-weight:300}
+#s17 .ros h3{font-size:52px;font-weight:800;margin-top:6px}
+#s17 .ros h3 em{font-style:normal;color:var(--wine3)}
+#s17 .wr{position:relative;margin:50px 70px 0;height:560px;border-radius:18px;overflow:hidden}
+#s17 .wr img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2) brightness(.92)}
+#s17 .wr:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 65%,#000)}
+#s17 .wr .ros-dot{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,80,100,.85),rgba(255,80,100,0) 70%)}
+#s17 .wr .lb{position:absolute;left:0;right:0;bottom:30px;z-index:2;font-size:24px;line-height:1.5}
+#s17 .wr .lb b{color:var(--rose)}
+#s17 .only{margin-top:100px}
+#s17 .only .k{font-size:30px;font-weight:300;color:#d0d0d4}
+#s17 .only .big{font-size:96px;font-weight:800;margin-top:12px;letter-spacing:-.04em}
+#s17 .paper{margin:90px 70px 0;background:#fff;color:var(--ink);border-radius:16px;overflow:hidden;text-align:left}
+#s17 .paper .ph1{background:var(--wine);color:#fff;padding:30px 40px}
+#s17 .paper .ph1 h4{font-size:30px;font-weight:700;line-height:1.35}
+#s17 .paper .pb{padding:34px 40px 36px;display:flex;gap:30px}
+#s17 .paper .jn{flex:none;width:200px;height:260px;background:#f2f1ef;border:1px solid #ddd;padding:18px 16px;font-size:11px;color:#555;line-height:1.4}
+#s17 .paper .jn .tt{font-family:Serif;font-size:17px;color:var(--ink);line-height:1.2;font-weight:600;margin:12px 0}
+#s17 .paper .jn i{display:block;height:6px;background:#dedcd8;margin-top:7px}
+#s17 .paper .jn i:nth-child(odd){width:80%}
+#s17 .paper .src{font-size:20px;line-height:1.6;color:#333}
+#s17 .paper .src b{background:linear-gradient(transparent 60%,var(--rose) 60%)}
+#s17 .paper cite{display:block;font-style:normal;font-size:13px;color:var(--grey);margin-top:20px;line-height:1.6;letter-spacing:0}
+
+/* ===== S18 story ===== */
+#s18{background:linear-gradient(180deg,#f4f3f1 0,#fff 30%,#fff 70%,#e9e7e4 100%);padding:120px 0 0}
+#s18 h2{font-size:48px;font-weight:700;line-height:1.35}
+#s18 h2 .logo{font-size:56px}
+#s18 h2 em{font-style:normal;color:var(--wine2)}
+#s18 .t1{font-size:22px;color:var(--grey2);margin-top:30px;line-height:1.65}
+#s18 .t1 b{color:var(--ink)}
+#s18 .img{height:560px;margin-top:56px;background:url(assets/img/lab.jpg) center/cover;-webkit-mask:linear-gradient(180deg,transparent 0,#000 18%,#000 75%,transparent)}
+#s18 .qt{padding:60px 90px 0;text-align:left}
+#s18 .qt .mk{font-family:Serif;font-size:110px;line-height:.5;color:var(--wine2);opacity:.35}
+#s18 .qt h3{font-size:38px;font-weight:700;line-height:1.45;margin-top:10px}
+#s18 .qt h3 em{font-style:normal;color:var(--wine2)}
+#s18 .qt p{font-size:22px;color:var(--grey2);margin-top:28px;line-height:1.7}
+#s18 .qt p b{color:var(--ink)}
+#s18 .stage{position:relative;height:880px;margin-top:80px;background:radial-gradient(ellipse at 50% 100%,#3a0b15 0,#0b0b0d 70%)}
+#s18 .stage img{position:absolute;left:50%;top:90px;transform:translateX(-50%);width:520px;border-radius:24px;box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+#s18 .stage p{position:absolute;left:0;right:0;bottom:70px;color:#fff;font-size:24px;line-height:1.65}
+#s18 .stage p b{font-weight:700}
+
+/* ===== S19 formula ===== */
+#s19{background:linear-gradient(180deg,#0b0b0d 0,#17070b 55%,#6d0f1e 100%);color:#fff;padding:110px 0 110px}
+#s19 .lay{position:relative;height:720px}
+#s19 .lay .prod{position:absolute;right:-170px;top:20px;width:620px;height:620px;border-radius:50%;overflow:hidden;box-shadow:0 0 120px rgba(196,52,75,.35)}
+#s19 .lay .prod img{width:760px;margin:-70px 0 0 -70px}
+#s19 .it{position:absolute;left:70px;width:340px;text-align:left}
+#s19 .it .hd{display:flex;align-items:center;gap:14px}
+#s19 .it img{width:60px;height:60px;border-radius:50%;object-fit:cover}
+#s19 .it h4{font-size:24px;font-weight:700;letter-spacing:0;line-height:1.15}
+#s19 .it p{font-size:15px;color:#a9a9ae;margin-top:12px;line-height:1.5;letter-spacing:0}
+#s19 .it .ln{height:1px;background:linear-gradient(90deg,var(--wine3),transparent);margin-top:18px;position:relative}
+#s19 .it .ln:after{content:"";position:absolute;left:70%;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--wine3)}
+#s19 .ttl{text-align:left;padding:0 70px}
+#s19 .ttl .k{font-size:44px;font-weight:300}
+#s19 .ttl h2{font-size:50px;font-weight:800;margin-top:4px}
+#s19 .ttl h2 .logo{font-size:58px}
+#s19 .ttl .en{font-size:24px;color:#d9b8be;margin-top:20px}
+
+/* ===== S20 usage ===== */
+#s20{background:#000;color:#fff;padding:0 0 110px}
+#s20 .ph{height:560px;border:0;border-bottom:1.5px dashed rgba(255,255,255,.3);background:url(assets/img/texture.jpg) center/cover;color:#fff;position:relative}
+#s20 .ph:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+#s20 .ph b,#s20 .ph span{position:relative}
+#s20 .warn{margin:90px auto 0;width:110px}
+#s20 h2{font-size:46px;font-weight:300;line-height:1.4;margin-top:34px}
+#s20 h2 b{font-weight:800}
+#s20 .sub-en{color:#7c7c82}
+#s20 .b{font-size:20px;color:#b9b9be;margin-top:40px;line-height:1.75}
+#s20 .b b{color:#fff}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- S01 공식몰 인트로 -->
+<section class="sec" id="s01" data-name="01_공식몰">
+  <div class="bg"></div><div class="grad"></div>
+  <div class="in">
+    <div class="logo">qdRx<sup>™</sup></div>
+    <h2>큐디알엑스 본사 공식 몰입니다</h2>
+    <p>본 제품은 qdRx 본사에서 직접 판매하는 정품입니다.</p>
+    <p class="fr">Ce produit est un produit authentique,<br>vendu directement par le siège de qdRx.</p>
+    <div class="badge">
+      <div class="seal"><span class="logo" style="font-size:34px">qdRx</span><small>OFFICIAL STORE</small></div>
+      <div><h3>qdRx 공식 스토어</h3><p>본사 정품 인증 마크를 확인해 주세요<br><span style="font-size:14px;color:#8a8a90">비공식 판매처를 통해 구입 시, 하자 및 AS 보상이 불가합니다.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- S02 런칭 -->
+<section class="sec c" id="s02" data-name="02_런칭">
+  <div class="k">닿지 못했던 새로운 차원</div>
+  <h1><span class="logo">qdRx</span>레드와인비니거 주름 탄력 앰플</h1>
+  <div class="tag"><span class="en" style="font-size:24px">French</span><span class="flag"><i></i><i></i><i></i></span><span class="en" style="font-size:24px">Red wine vinegar contained</span></div>
+  <div class="shot"></div>
+</section>
+
+<!-- S03 프랑스산 / 13년 전 -->
+<section class="sec c" id="s03" data-name="03_프랑스산_13년전">
+  <div class="bg"></div>
+  <div class="in">
+    <div class="h-l">폴리페놀 함량이 가장 높은</div>
+    <div class="h-b">프랑스산 레드와인비니거,</div>
+    <div class="yt-wrap" style="margin-top:420px">
+      <div class="yt" style="margin:0"><img src="assets/img/c_yt.jpg" alt=""></div>
+      <div class="lens"></div>
+    </div>
+    <div class="q">
+      <div class="h-l"><b style="font-weight:700;color:#fff">13년 전</b>, 서구에서는 이미</div>
+      <div class="h-b">피부관리에 <em>활용</em>하고 있었습니다.</div>
+      <div class="sub-en">Red wine vinegar has been used in Western skincare for over a decade.</div>
+    </div>
+  </div>
+</section>
+
+<!-- S04 상위 1% 프랑스산 -->
+<section class="sec c" id="s04" data-name="04_원산지증명">
+  <div class="h-l">레드와인비니거 중 상위 1%,</div>
+  <div class="h-b"><em>프랑스산 비니거</em>만을 고집합니다</div>
+  <div class="doc">
+    <img src="assets/img/c_cert.jpg" alt="원산지 증명서">
+    <div class="hl"><span>Vinegar · Plant (Red Wine)</span><strong>Country of Origin <span class="flag" style="width:40px;height:26px"><i></i><i></i><i></i></span> France</strong></div>
+  </div>
+  <div class="cap">원료사 공식 증명서로 확인된 <b>프랑스산 원료</b></div>
+</section>
+
+<!-- S05 포뮬러 -->
+<section class="sec c" id="s05" data-name="05_포뮬러">
+  <div class="bg"></div>
+  <div class="in">
+    <div class="k">세상에 존재하지 않던 레드와인비니거 앰플</div>
+    <h2>과학적 연구로부터<br>탄생한 스킨케어 포뮬러입니다</h2>
+  </div>
+  <div class="drop"></div>
+  <div class="ref">qdRx RED WINE VINEGAR AMPOULE · FORMULA TEXTURE</div>
+</section>
+
+<!-- S06 qdRx Complex -->
+<section class="sec c" id="s06" data-name="06_컴플렉스">
+  <div class="k">새로운 혁신</div>
+  <h2><span class="logo">qdRx</span> Complex 배합</h2>
+  <div class="formula"><b>Red Wine Vinegar</b> + <b>Peptide</b> + <b>Adenosine</b> + <b>Collagen</b> + <b>PDRN</b></div>
+  <div class="t2">과학적인 설계로 구성된<br><b>최적의 시너지 배합</b></div>
+  <div class="mol">
+    <img src="assets/img/molecule.jpg" alt="">
+    <svg width="860" height="620" fill="none" stroke="#6d0f1e" stroke-width="1" stroke-dasharray="3 4">
+      <path d="M330 150 L250 90 L130 90"/><circle cx="330" cy="150" r="4" fill="#6d0f1e" stroke="none"/>
+      <path d="M540 140 L620 80 L740 80"/><circle cx="540" cy="140" r="4" fill="#6d0f1e" stroke="none"/>
+      <path d="M260 330 L130 330"/><circle cx="260" cy="330" r="4" fill="#6d0f1e" stroke="none"/>
+      <path d="M600 330 L740 330"/><circle cx="600" cy="330" r="4" fill="#6d0f1e" stroke="none"/>
+      <path d="M430 510 L430 560 L560 560"/><circle cx="430" cy="510" r="4" fill="#6d0f1e" stroke="none"/>
+    </svg>
+    <div class="lbl" style="left:70px;top:58px;text-align:left"><b>Red Wine Vinegar</b>레드와인비니거</div>
+    <div class="lbl" style="right:70px;top:48px;text-align:right"><b>Peptide</b>펩타이드</div>
+    <div class="lbl" style="left:70px;top:298px;text-align:left"><b>Adenosine</b>아데노신</div>
+    <div class="lbl" style="right:70px;top:298px;text-align:right"><b>Collagen</b>콜라겐</div>
+    <div class="lbl" style="left:570px;top:530px;text-align:left"><b>PDRN</b>피디알엔</div>
+  </div>
+  <div class="card">
+    <div><div class="en">Dermatologic Balance,<br>precisely engineered for daily use.</div>
+    <p>피부세포 본연의 균형을 깨우는 큐디알엑스는<br>큐디알엑스 컴플렉스 약 35mL를 정확하게 배합하였습니다.</p></div>
+    <div class="thumb"></div>
+  </div>
+</section>
+
+<!-- S07 저자극 -->
+<section class="sec c" id="s07" data-name="07_저자극테스트">
+  <div class="h-l">자극이 쌓이면 <b>염증</b>이 되고,<br>염증이 쌓이면 <b>노화</b>가 옵니다.</div>
+  <div class="so">그래서,</div>
+  <div class="tested">
+    <div class="k">예민한 피부도 안심하고 사용하세요</div>
+    <h3>피부 저자극 테스트 완료</h3>
+    <div class="stamp">LOW<b>저자극</b>TESTED</div>
+    <div class="ph"><b>[임상결과 이미지 삽입]</b><span>고객사 제공 예정 · 시험기관 / 판정 결과 강조 박스</span></div>
+  </div>
+  <div class="no">
+    <div class="q">자극이 없다면 효과도 없다?</div>
+    <div class="x">NO!</div>
+  </div>
+  <div class="vline"></div>
+  <div class="stat">
+    <div class="k">민감성 피부 체험단 대상</div>
+    <div class="big">98.7<small>%</small></div>
+    <div class="big-r">98.7%</div>
+    <h4>효과 만족도</h4>
+  </div>
+</section>
+
+<!-- S08 체험 후기 -->
+<section class="sec c rv-sec" id="s08" data-name="08_체험후기">
+  <div class="eyebrow" style="color:#8a8a90">REAL REVIEW</div>
+  <div class="h-l" style="margin-top:16px">자극 없이,</div>
+  <div class="h-b" style="margin-bottom:56px">바로 <span class="wine-t">효과</span>를 봤습니다</div>
+  <div class="rv">
+    <div class="top"><span class="stars">★★★★★</span><span class="meta">구매 고객 후기</span></div>
+    <div class="ba"><div><div class="ph">사진 별도 전달 예정</div><span>사용 전</span></div><div><div class="ph">사진 별도 전달 예정</div><span>사용 후</span></div></div>
+    <p class="txt">옆집맘이 써보라고 해서 써봤는데,<br>자극 이렇게 없는데 효과 이정도여도 되는건가요?<br>애낳고부터 계속 주름이랑 탄력때문에 맘고생했는데 너무 감사합니다 ㅠ.ㅠ<small>(물론 애프터 사진은 화장을 쬐꼼 한거긴 해요 ㅎㅎㅎ)</small></p>
+  </div>
+  <div class="rv">
+    <div class="top"><span class="stars">★★★★★</span><span class="meta">구매 고객 후기</span></div>
+    <div class="ba"><div><div class="ph">사진 별도 전달 예정</div><span>사용 전</span></div><div><div class="ph">사진 별도 전달 예정</div><span>사용 후</span></div></div>
+    <p class="txt">펩타이드만 들어간건 효과를 못봤고,<br>레티놀 들어간건 자극이 너무 세서 이도저도 못하고 있었어요.<br>레드와인비니거 앰플 사용하고 자극 없이 바로 효과봤습니다 ^^</p>
+  </div>
+</section>
+
+<!-- S09 4주 인체적용시험 (레이아웃: dermacaps) -->
+<section class="sec" id="s09" data-name="09_인체적용시험">
+  <div class="hd"><span class="logo">qdRx</span><span>CLINICAL / 04 WEEKS</span></div>
+  <div class="top">
+    <h2>4주간 확인한<br>피부의 변화.</h2>
+    <div class="s">주름부터 탄력, 결까지</div>
+    <div class="nums"><div><b>00</b>주름</div><div><b>00</b>탄력</div><div><b>00</b>결</div></div>
+    <div class="t">00명 · 4주 인체적용시험<small>실제 측정 이미지와 평균값으로 확인</small></div>
+    <img class="bust" src="assets/img/c_bust.jpg" alt="">
+  </div>
+  <h5>4주 후 개선 지수</h5>
+  <div class="grid">
+    <div class="cell"><div class="cat">01 / WRINKLE</div><h6>[측정 항목 1]</h6>
+      <div class="n"><b>000.0</b><small>4주 후<br>개선 지수</small></div>
+      <div class="ba"><div><span>사용 전</span><div class="ph">전 사진</div></div><div><span>4주 사용 후</span><div class="ph">후 사진</div></div></div>
+      <div class="m"><span>측정값</span><b>-0.00%</b></div>
+      <div class="bar"><span>사용 전</span><i style="width:100%"></i><em>00.00</em></div>
+      <div class="bar a"><span>4주 후</span><i style="width:88%"></i><em>00.00</em></div></div>
+    <div class="cell"><div class="cat">02 / ELASTICITY</div><h6>[측정 항목 2]</h6>
+      <div class="n"><b>000.0</b><small>4주 후<br>개선 지수</small></div>
+      <div class="ba"><div><span>사용 전</span><div class="ph">전 사진</div></div><div><span>4주 사용 후</span><div class="ph">후 사진</div></div></div>
+      <div class="m"><span>측정값</span><b>-0.00%</b></div>
+      <div class="bar"><span>사용 전</span><i style="width:100%"></i><em>00.00</em></div>
+      <div class="bar a"><span>4주 후</span><i style="width:90%"></i><em>00.00</em></div></div>
+    <div class="cell"><div class="cat">03 / WRINKLE</div><h6>[측정 항목 3]</h6>
+      <div class="n"><b>000.0</b><small>4주 후<br>개선 지수</small></div>
+      <div class="ba"><div><span>사용 전</span><div class="ph">전 사진</div></div><div><span>4주 사용 후</span><div class="ph">후 사진</div></div></div>
+      <div class="m"><span>측정값</span><b>-0.00%</b></div>
+      <div class="bar"><span>사용 전</span><i style="width:100%"></i><em>00.00</em></div>
+      <div class="bar a"><span>4주 후</span><i style="width:92%"></i><em>00.00</em></div></div>
+    <div class="cell prod"><img src="assets/img/p_box.jpg" alt="qdRx 레드와인비니거 앰플"></div>
+  </div>
+  <div class="foot">본 수치는 제품 사용 전 대비 사용 4주 후 각 측정값을 지수 기준으로 환산한 결과입니다.<br>인체적용시험 결과로 개인에 따라 차이가 있을 수 있습니다.<br>시험기관: [기관명] / 시험대상: [대상] / 시험기간: [기간]</div>
+</section>
+
+<!-- S10 안심 환불 -->
+<section class="sec c" id="s10" data-name="10_안심환불">
+  <div class="k">안심 환불 제도</div>
+  <h2>제품 수령 후 2주 이내<br><em>불만족 시 100% 무료 환불</em></h2>
+  <div class="card"><img src="assets/img/p_france.jpg" alt=""></div>
+  <div class="t1">14일 간 사용 후, 조금이라도 효과가 없다면<br><b>100% 전액 환불을 보장해드립니다.</b></div>
+  <div class="t2">1~2회 사용한다고 효과를 볼 수 없습니다.<br>하루 1회 꾸준하게, 충분하게만 사용해주세요.</div>
+</section>
+
+<!-- S11 피부과 입점 -->
+<section class="sec c" id="s11" data-name="11_피부과입점">
+  <div class="logo">qdRx</div>
+  <div class="k">큐디알엑스 레드와인비니거 주름 탄력 앰플</div>
+  <h2>피부과에서 만나보세요</h2>
+  <div class="img"></div>
+  <div class="pill">피부과 · 에스테틱 입점 문의처</div>
+  <p>빠른 입점이 필요할 경우<br>이메일로 문의 바랍니다</p>
+  <div class="mail">[입점 문의 이메일]</div>
+</section>
+
+<!-- S12 이벤트 -->
+<section class="sec c" id="s12" data-name="12_이벤트가격">
+  <div class="bg"></div>
+  <div class="in">
+    <div class="k">한정 수량 EVENT</div>
+    <h2>담을수록 커지는 역대급 혜택</h2>
+    <div class="sub-en">This promotion may end early when stock runs out.</div>
+
+    <div class="deal"><div class="bar"><span class="logo">qdRx</span></div><div class="pct">55<small>%</small></div>
+      <div class="row">
+        <div class="pics"><img src="assets/img/p_box.jpg" style="left:0;top:20px"><img src="assets/img/p_box.jpg" style="left:45px;top:10px"><img src="assets/img/p_box.jpg" style="left:90px;top:0"></div>
+        <div class="info"><div class="tags"><span>최대할인 옵션</span></div>
+          <h4>[2+1] 큐디알엑스<br>레드와인비니거 앰플<small>x 3EA</small></h4>
+          <div class="pr"><span>정상가</span><s>177,000원</s></div>
+          <div class="fin"><span>할인가</span><b>79,900원</b></div></div>
+      </div></div>
+
+    <div class="deal"><div class="bar"><span class="logo">qdRx</span></div><div class="pct">50<small>%</small></div>
+      <div class="row">
+        <div class="pics"><img src="assets/img/p_box.jpg" style="left:20px;top:15px"><img src="assets/img/p_box.jpg" style="left:75px;top:0"></div>
+        <div class="info"><div class="tags"><span>BEST</span></div>
+          <h4>[1+1] 큐디알엑스<br>레드와인비니거 앰플<small>x 2EA</small></h4>
+          <div class="pr"><span>정상가</span><s>118,000원</s></div>
+          <div class="fin"><span>할인가</span><b>59,800원</b></div></div>
+      </div></div>
+
+    <div class="deal"><div class="bar"><span class="logo">qdRx</span></div><div class="pct">45<small>%</small></div>
+      <div class="row">
+        <div class="pics"><img src="assets/img/p_box.jpg" style="left:45px;top:5px"></div>
+        <div class="info">
+          <h4>큐디알엑스<br>레드와인비니거 앰플<small>x 1EA</small></h4>
+          <div class="pr"><span>정상가</span><s>59,900원</s></div>
+          <div class="fin"><span>할인가</span><b>32,900원</b></div></div>
+      </div></div>
+
+    <p class="warn">*재고 소진 시 예고없이 중단 가능,<br>할인기간 중 결제 (장바구니, 찜 X) 고객 한정</p>
+  </div>
+</section>
+
+<!-- S13 실제 후기 -->
+<section class="sec c rv-sec" id="s13" data-name="13_실구매후기">
+  <div class="h-l">실제 구매 고객들의</div>
+  <div class="h-b">100% 실제 후기</div>
+  <div class="rating"><b>4.8</b><span>/ 5</span></div>
+  <div class="st">★★★★★<i>★★★★★</i></div>
+  <div class="rv"><div class="top"><span class="stars">★★★★★</span><span class="meta">[작성일] ([아이디]님의 후기)</span></div>
+    <div class="ba"><div><div class="ph">사용 전 사진</div><span>사용 전</span></div><div><div class="ph">사용 후 사진</div><span>사용 후</span></div></div>
+    <p class="txt">[실제 qdRx 구매 후기 텍스트 1]</p></div>
+  <div class="rv"><div class="top"><span class="stars">★★★★★</span><span class="meta">[작성일] ([아이디]님의 후기)</span></div>
+    <div class="ba"><div><div class="ph">사용 전 사진</div><span>사용 전</span></div><div><div class="ph">사용 후 사진</div><span>사용 후</span></div></div>
+    <p class="txt">[실제 qdRx 구매 후기 텍스트 2]</p></div>
+  <div class="rv"><div class="top"><span class="stars">★★★★★</span><span class="meta">[작성일] ([아이디]님의 후기)</span></div>
+    <div class="ba"><div><div class="ph">사용 전 사진</div><span>사용 전</span></div><div><div class="ph">사용 후 사진</div><span>사용 후</span></div></div>
+    <p class="txt">[실제 qdRx 구매 후기 텍스트 3]</p></div>
+</section>
+
+<!-- S14 Check Point -->
+<section class="sec c" id="s14" data-name="14_체크포인트">
+  <span class="pill">Check Point</span>
+  <div class="k">주름/탄력 개선의 핵심?</div>
+  <h2>다름아닌, <em>저자극</em>입니다.</h2>
+  <div class="vline"></div>
+  <div class="flow">
+    <figure><img src="assets/img/skin_irritated.jpg" alt=""><figcaption>지속 자극으로 인한<b>염증 + 각질</b></figcaption></figure>
+    <div class="arrow"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <figure><img src="assets/img/skin_wrinkle.jpg" alt=""><figcaption>이로 인한<b>피부 노화</b></figcaption></figure>
+  </div>
+  <div class="t">지속적 자극 → 염증 / 각질<b>결국은 피부 노화를 유발합니다</b></div>
+</section>
+
+<!-- S15 시장 / 44.5% -->
+<section class="sec c" id="s15" data-name="15_시중제품_44.5">
+  <div class="quote">
+    <div class="mk">“</div>
+    <h3>지속적인 피부자극이 염증을 유발,<br>오히려 피부노화를 촉진할 수 있다</h3>
+    <cite>Fernandez-Guarino M et al, Decoding Skin Aging: A Review of Mechanisms, Markers,<br>and Modern Therapies, Cosmetics, 2025;12(4):144</cite>
+  </div>
+  <div class="k">시중에 탄력/주름제품,</div>
+  <h2>너무나 많습니다</h2>
+  <div class="shot"><img src="assets/img/c_market_blur.jpg" alt=""><div class="lens"><b>총 141개</b></div></div>
+  <div class="t1">하지만 대부분은 레티놀 등 자극적인 제품…<b>예민한 피부는 갈 곳이 없습니다</b></div>
+  <div class="chain"><span>자극</span><i>→</i><span>단기적 효과</span><i>→</i><span>결국은 노화</span></div>
+  <div class="real">꾸준히 가능한 관리가 <b>진짜 관리</b>입니다</div>
+  <div class="survey"><p>시중 제품을 사용한 후,<br><span style="color:#fff;font-weight:700">불편한 자극을 느낀 적이 있다</span></p><b>44.5<small>%</small></b></div>
+  <div class="fin">
+    <div class="t">저희는 자극적인 성분은 100% 제거하여,</div>
+    <div class="vline" style="height:50px;margin:24px auto"></div>
+    <h3>채워지지 않은 <em>44.5%</em>의 수요에<br>집중했습니다</h3>
+  </div>
+</section>
+
+<!-- S16 Point 1 -->
+<section class="sec" id="s16" data-name="16_포인트1_성분">
+  <div class="head">
+    <img src="assets/img/p_lab.jpg" alt="">
+    <div class="tx">
+      <span class="point">Point 1</span>
+      <h2>자극없이, 어떻게 효과적일까요?</h2>
+      <h3>아낌없이 넣었기에<br>가능합니다</h3>
+      <p>주름·탄력개선을 위해,<br><b>원가를 고려하지 않고</b> 때려넣었습니다</p>
+    </div>
+    <ul class="list">
+      <li><img src="assets/img/ing_adenosine.jpg"><div><b>아데노신</b><span>주름개선 기능성</span></div></li>
+      <li><img src="assets/img/ing_peptide.jpg"><div><b>펩타이드 13종</b><span>주름개선</span></div></li>
+      <li><img src="assets/img/ing_ceramide.jpg"><div><b>세라마이드 6종</b><span>피부장벽 개선</span></div></li>
+      <li><img src="assets/img/ing_redwine.jpg"><div><b>레드와인비니거</b><span>폴리페놀의 항산화로 인한 탄력 개선</span></div></li>
+      <li><img src="assets/img/ing_astaxanthin.jpg"><div><b>아스타잔틴</b><span>비타민C의 6,000배 항산화력</span></div></li>
+      <li><img src="assets/img/ing_panthenol.jpg"><div><b>판테놀</b><span>피부진정 + 재생</span></div></li>
+      <li><img src="assets/img/ing_niacinamide.jpg"><div><b>나이아신아마이드</b><span>추가 주름·탄력개선 + 미백 기능성</span></div></li>
+    </ul>
+    <div class="note">*원료적 특성에 한함</div>
+  </div>
+  <div class="mech c">
+    <div class="k">수많은 성분들의 시너지 효과,</div>
+    <h3>압도적 탄력 복원 메커니즘</h3>
+  </div>
+  <div class="step"><div class="sh"><i>1</i>표면 탄력 · 주름 개선</div><div class="sb">
+    <div class="ing"><img src="assets/img/ing_peptide.jpg">펩타이드<small>13종</small></div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_ceramide.jpg">세라마이드<small>6종</small></div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_adenosine.jpg">아데노신</div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/texture.jpg">마린 콜라겐</div></div></div>
+  <div class="step-arrow"></div>
+  <div class="step"><div class="sh"><i>2</i>항산화 성분 침투</div><div class="sb">
+    <div class="ing"><img src="assets/img/ing_redwine.jpg">레드와인비니거</div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_niacinamide.jpg">나이아신아마이드</div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_astaxanthin.jpg">아스타잔틴</div></div></div>
+  <div class="step-arrow"></div>
+  <div class="step"><div class="sh"><i>3</i>피부 진정 + 재생</div><div class="sb">
+    <div class="ing"><img src="assets/img/ing_panthenol.jpg">판테놀</div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_cica.jpg">시카</div></div></div>
+  <div class="step-arrow"></div>
+  <div class="step"><div class="sh"><i>4</i>피부장벽 케어 + 보습</div><div class="sb">
+    <div class="ing"><img src="assets/img/ing_ceramide.jpg">6종 세라마이드<small>6-CERA COMPLEX<br>1,000 ppb</small></div><div class="plus">+</div>
+    <div class="ing"><img src="assets/img/ing_panthenol.jpg">히알루론산</div></div></div>
+</section>
+
+<!-- S17 Point 2 -->
+<section class="sec c" id="s17" data-name="17_포인트2_항산화">
+  <div class="head">
+    <div class="bg"></div>
+    <div class="in">
+      <span class="point">Point 2</span>
+      <h2>항산화 No.1</h2>
+      <h3><em>프랑스산</em> 레드와인비니거의 기적</h3>
+      <p>레드와인비니거 속 <b>레스베라트롤 &amp; 폴리페놀</b>이 핵심</p>
+    </div>
+    <div class="orb"><img src="assets/img/p_sphere.jpg" alt=""></div>
+    <div class="note">*원료에 대한 설명에 한함</div>
+  </div>
+  <div class="ros">
+    <div class="k">탄력과 주름,</div>
+    <h3><em>활성산소</em>가 범인입니다</h3>
+  </div>
+  <div class="wr">
+    <img src="assets/img/skin_wrinkle.jpg" alt="">
+    <div class="ros-dot" style="left:300px;top:240px;width:60px;height:60px"></div>
+    <div class="ros-dot" style="left:420px;top:300px;width:40px;height:40px"></div>
+    <div class="ros-dot" style="left:360px;top:170px;width:30px;height:30px"></div>
+    <div class="lb">활성산소가 피부세포를 산화시켜<br><b>탄력 저하와 주름</b>을 유발합니다</div>
+  </div>
+  <div class="only">
+    <div class="k">활성산소를 없앨 유일한 해결책,</div>
+    <div class="big">“항산화”</div>
+  </div>
+  <div class="paper">
+    <div class="ph1"><div style="font-size:16px;opacity:.75;margin-bottom:6px">현대과학으로 입증된</div><h4>레드와인비니거의 항산화 효능</h4></div>
+    <div class="pb">
+      <div class="jn"><div style="letter-spacing:.1em;font-size:10px;color:var(--wine2)">JOURNAL OF FUNCTIONAL FOODS · 2025</div>
+        <div class="tt">Resveratrol, a food-derived polyphenol, promotes melanosomal degradation in skin fibroblasts</div>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div><p class="src">레드와인비니거 속<br><b>레스베라트롤과 폴리페놀의<br>항산화 효능 보고</b></p>
+      <cite>출처: Saki Okamoto et al, Resveratrol, a food-derived polyphenol, promotes Melanosomal degradation in skin fibroblasts through coordinated activation of autophagy, lysosomal, and antioxidant pathways, Journal of Functional Foods, 2025<br>*원료에 대한 설명에 한함</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- S18 브랜드 스토리 -->
+<section class="sec c" id="s18" data-name="18_브랜드스토리">
+  <h2><span class="logo">qdRx</span> <em>레와비 앰플</em>은<br>이렇게 만들어졌습니다.</h2>
+  <p class="t1">수많은 가짜들이 넘쳐나는 기능성화장품 시장에서,<br>단기적인 효과만을 노리지 않고<br><b>근본적인 문제 해결에 집중하였습니다.</b></p>
+  <div class="img"></div>
+  <div class="qt">
+    <div class="mk">“</div>
+    <h3>시중 제품들이 효과가 좋다면,<br>왜 계속해서 <em>새로운 기능성화장품</em>이<br>등장할까?</h3>
+    <p>이 당연한 물음에 qdRx 연구진은,<br><b>첫구매가 끝이 아닌, 시작이 되는 제품</b>을 만들자 다짐했습니다.</p>
+  </div>
+  <div class="stage">
+    <img src="assets/img/p_box.jpg" alt="">
+    <p>qdRx 연구진은 단기 효과가 아닌<br><b>꾸준히 쓸 수 있는 근본적인 관리</b>를 찾아냈습니다</p>
+  </div>
+</section>
+
+<!-- S19 포뮬러 -->
+<section class="sec" id="s19" data-name="19_포뮬러">
+  <div class="lay">
+    <div class="prod"><img src="assets/img/p_sphere.jpg" alt=""></div>
+    <div class="it" style="top:20px"><div class="hd"><img src="assets/img/ing_redwine.jpg"><h4>Red Wine<br>Vinegar</h4></div>
+      <p>Contains Resveratrol,<br>a highly anti-oxidant type polyphenol.</p><div class="ln"></div></div>
+    <div class="it" style="top:250px"><div class="hd"><img src="assets/img/ing_peptide.jpg"><h4>13-Peptide<br>Complex</h4></div>
+      <p>Formulated 13 different types of Peptide,<br>supporting the tissue from wrinkles.</p><div class="ln"></div></div>
+    <div class="it" style="top:480px"><div class="hd"><img src="assets/img/ing_ceramide.jpg"><h4>6-Ceramide<br>Complex</h4></div>
+      <p>Ceramide, a main ingredient that forms our skin.<br>Formulated 6 types of ceramide.</p><div class="ln"></div></div>
+  </div>
+  <div class="ttl">
+    <div class="k">자극 없이, 근본부터</div>
+    <h2><span class="logo">qdRx</span> 레드와인비니거 포뮬러</h2>
+    <div class="en">Contains French Red Wine Vinegar, with Resveratrol 45%</div>
+  </div>
+</section>
+
+<!-- S20 사용 안내 -->
+<section class="sec c" id="s20" data-name="20_사용안내">
+  <div class="ph"><b>[안끈적이는 연출컷 삽입]</b><span>고객사 전달 예정 · 현재 임시 제형 이미지</span></div>
+  <svg class="warn" viewBox="0 0 100 90" fill="none" stroke="#c4344b" stroke-width="3"><path d="M50 6 L95 84 H5 Z" stroke-linejoin="round"/><path d="M50 32 V58" stroke-linecap="round"/><circle cx="50" cy="70" r="2.5" fill="#c4344b"/></svg>
+  <h2>바르고 나서, 최소 1시간<br><b>세안을 지양해주세요.</b></h2>
+  <div class="sub-en">Please avoid washing your face for at least 1 hour after application.</div>
+  <p class="b">큐디알엑스 레드와인비니거 주름 탄력 앰플은,<br>진피층 흡수가 용이한 원료만을 사용하여<br><b>끈적임이 전혀 없고 흡수력이 좋습니다.</b><br><br>사용 시 불편감을 최소화 하였사오니,<br>개선 효과를 위해 세안을 최소 1시간 자제해주시면 감사하겠습니다.</p>
+</section>
+
+</div>
+</body>
+</html>
